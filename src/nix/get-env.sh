@@ -45,16 +45,19 @@ __dumpEnv() {
         if [[ $__var_name =~ ^BASH_ || \
               $__var_name = _ || \
               $__var_name = DIRSTACK || \
+              $__var_name = EPOCHREALTIME || \
+              $__var_name = EPOCHSECONDS || \
               $__var_name = EUID || \
               $__var_name = FUNCNAME || \
+              $__var_name = GROUPS || \
               $__var_name = HISTCMD || \
               $__var_name = HOSTNAME || \
-              $__var_name = GROUPS || \
+              $__var_name = LINENO || \
               $__var_name = PIPESTATUS || \
               $__var_name = PWD || \
               $__var_name = RANDOM || \
-              $__var_name = SHLVL || \
-              $__var_name = SECONDS \
+              $__var_name = SECONDS || \
+              $__var_name = SHLVL \
             ]]; then continue; fi
 
         if [[ -z $__first ]]; then printf ',\n'; else __first=; fi
